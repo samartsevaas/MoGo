@@ -1,0 +1,56 @@
+@mixin main_font{
+    font: {
+        family:Montserrat;
+    }
+}
+@mixin main-color {
+    font: {
+        color: #000000;
+    }
+}
+@mixin title {
+ width: 130px;
+ height: 24px;
+ color: #333333;
+ font-family: "Kaushan Script";
+ font-size: 24px;
+ font-weight: 400;
+ text-align: center;
+}
+
+@mixin subtitle {
+ width: 309px;
+ height: 23px;
+ color: #333333;
+ font-size: 30px;
+ font-weight: 700;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+@mixin title_line-under {
+    &:after {
+        content: " ";
+        position: absolute;
+        height: 3px;
+        width: 60px;
+        left: 50%;
+        background-color: #f38181;
+        margin: 0px 0px 40px 0px;
+      }
+}
+@mixin nav_line-under {
+    &:after {
+        content: " ";
+        position: absolute;
+        height: 3px;
+        width: 50px;
+        left: 50%;
+        background-color: #fce38a;
+      }
+}
+
+body{
+    @include main-color;
+    @include main_font;
+}
